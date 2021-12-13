@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>A Tasty Loaf &nbsp; | &nbsp; Home</title>
         <link href="./static/css/style.css" rel="stylesheet" />
-        <script src="./static/javaScript/index.js"></script>
+        <script src="./static/javaScript/contact.js"></script>
     </head>
     <body>
         <header>
@@ -41,9 +41,7 @@
                     <div class="drop">
                         <button class="dropButton">Extra</button>
                         <div class="dropStuff">
-                            <a href="./resources.html"
-                                >Resources</a
-                            >
+                            <a href="./resources.html">Resources</a>
                             <a href="./hangMan.html">Game</a>
                         </div>
                     </div>
@@ -67,7 +65,75 @@
         </header>
         <main>
             <h1 class="flexParent pageTitle">Contact Form</h1>
+            <div id="messageBox" class="hidden">
+                <p id="formMessage" class="flexParent contactBoxed">DefaultText</p>
+            </div>
+            <div id="jsToggle" class="hidden">
+                <form id="contactForm">
+                    <div class="flexParent flexNorm">
+                        <div class="flexChild">
+                            <label for="fName">Your first name:</label>
+                            <input
+                                id="fName"
+                                type="text"
+                                name="textName"
+                                placeholder="e.g. John"
+                                onkeypress="return event.keyCode != 13;"
+                            /><br />
+                            <p id="fNameWarn" class="warningHide">
+                                Your first name must > 2 characters and letters
+                                only
+                            </p>
+                            <br />
+                            <label for="lName">Your last name:</label>
+                            <input
+                                id="lName"
+                                type="text"
+                                name="textName"
+                                placeholder="e.g. Doe"
+                                onkeypress="return event.keyCode != 13;"
+                            /><br />
+                            <p id="lNameWarn" class="warningHide">
+                                Your last name must > 2 characters and letters
+                                only
+                            </p>
+                            <br />
+                            <label for="eMail">Your eMail address:</label>
+                            <input
+                                id="eMail"
+                                type="email"
+                                name="textName"
+                                placeholder="e.g. jDoe@email.com"
+                                onkeypress="return event.keyCode != 13;"
+                            /><br />
+                            <p id="emailWarn" class="warningHide">
+                                use format: text@text.text
+                            </p>
+                        </div>
 
+                        <div class="flexChild">
+                            <textarea
+                                id = "theMessage"
+                                rows="5"
+                                cols="50"
+                                placeholder=" Your message"
+                            ></textarea>
+                            <br />
+                            <p id="textWarn" class="warningHide">
+                                Message field is empty
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flexParent">
+                        <input
+                            class="subButton"
+                            id="contactSubmit"
+                            type="button"
+                            value="Submit"
+                        />
+                    </div>
+                </form>
+            </div>
         </main>
         <footer>
             <div class="innerFoot">

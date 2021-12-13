@@ -88,14 +88,16 @@
                                     name="feedingNum"
                                     value="1"
                                     checked
-                                />1
+                                />
+                                <label for="feedingNum1">1</label>
                                 <br />
                                 <input
                                     id="feedingNum2"
                                     type="radio"
                                     name="feedingNum"
                                     value="2"
-                                />2
+                                />
+                                <label for="feedingNum2">2</label>
                             </fieldset>
                             <br />
                             <div>
@@ -109,7 +111,9 @@
                                     type="number"
                                     name="starterAmount"
                                     placeholder="in grams e.g. 15"
-                                /><span id="warningAmount" class="warningFormat warningHide"
+                                /><span
+                                    id="warningAmount"
+                                    class="warningFormat warningHide"
                                     >Must be a number larger than 0</span
                                 >
                             </div>
@@ -125,7 +129,9 @@
                                     type="number"
                                     name="starterRemain"
                                     placeholder="in grams e.g 15"
-                                /><span id="warningRemain" class="warningFormat warningHide"
+                                /><span
+                                    id="warningRemain"
+                                    class="warningFormat warningHide"
                                     >Must be a number 0 or larger</span
                                 >
                             </div>
@@ -141,17 +147,21 @@
                                     type="number"
                                     name="starterPercent"
                                     placeholder="percentage e.g. 10"
-                                /><span id="warningPercent" class="warningFormat warningHide"
+                                /><span
+                                    id="warningPercent"
+                                    class="warningFormat warningHide"
                                     >Must be between 0 and 100</span
                                 >
                             </div>
-                            <br />  
+                            <br />
                             <input
+                                class="subButton"
                                 id="starterSubmit"
                                 type="button"
                                 value="Submit"
                             />
                             <input
+                                class="subButton"
                                 id="starterReset"
                                 type="reset"
                                 value="Clear Entries"
