@@ -4,79 +4,31 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>A Tasty Loaf &nbsp; | &nbsp; Home</title>
+        <title>HangMan</title>
         <link href="./static/css/style.css" rel="stylesheet" />
-        <script src="./static/javaScript/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="./static/javaScript/hangman.js" type="module"></script>
     </head>
     <body>
-        <header>
-            <div class="titleSec">
-                <div class="flexParent">
-                    <h1 class="siteTitle">The Tasty Loaf</h1>
-                </div>
-                <nav>
-                    <button
-                        class="dropButton"
-                        onclick="window.location.href='./index.html'"
-                    >
-                        Home
-                    </button>
-                    <div class="drop">
-                        <button class="dropButton">Recipes</button>
-                        <div class="dropStuff">
-                            <a href="./rec_slow_sourdough.html"
-                                >Slow Sourdough</a
-                            >
-                            <a href="./rec_pizza_dough.html">Pizza Dough</a>
-                        </div>
-                    </div>
-
-                    <div class="drop">
-                        <button class="dropButton">Worksheets</button>
-                        <div class="dropStuff">
-                            <a href="./wkst_starter.html">Starter Worksheet</a>
-                        </div>
-                    </div>
-
-                    <div class="drop">
-                        <button class="dropButton">Extra</button>
-                        <div class="dropStuff">
-                            <a href="./resources.html"
-                                >Resources</a
-                            >
-                            <a href="./hangMan.html">Game</a>
-                        </div>
-                    </div>
-
-                    <button
-                        class="dropButton"
-                        onclick="window.location.href='./contact.html'"
-                    >
-                        Contact
-                    </button>
-
-                    <button
-                        class="dropButton"
-                        onclick="window.location.href='./about.html'"
-                    >
-                        About
-                    </button>
-                </nav>
+        <div id="app">
+            {{displayWord}}
+            <br />
+            {{message}}
+            <div>
+                <input
+                    v-model="myGuess"
+                    @keyup.enter="addItem"
+                    type="text"
+                    placeholder="your guess"
+                    maxlength="1"
+                />
+                <button @click="addItem">Guess</button>
             </div>
-            <div class="titleBase"></div>
-        </header>
-        <main>
-            <h1 class="flexParent pageTitle">Hangman</h1>
-            <h2 class="flexParent">Waiting on your bread? Lets play a game!</h2>
-
-
-        </main>
-        <footer>
-            <div class="innerFoot">
-                <p>The Tasty Loaf</p>
-                <p>A Bread Baking Blog</p>
-                <p>2021</p>
+            <div>
+                <p>Your Guesses:</p>
+                <span v-for="i in usedLetters">{{i}} </span>
             </div>
-        </footer>
+            <button @click="reset">Reset</button>
+        </div>
     </body>
 </html>

@@ -14,12 +14,9 @@
                     <h1 class="siteTitle">The Tasty Loaf</h1>
                 </div>
                 <nav>
-                    <button
-                        class="dropButton"
-                        onclick="window.location.href='./index.html'"
-                    >
-                        Home
-                    </button>
+                    <a href="./index.html">
+                        <button class="dropButton">Home</button>
+                    </a>
                     <div class="drop">
                         <button class="dropButton">Recipes</button>
                         <div class="dropStuff">
@@ -45,33 +42,29 @@
                         </div>
                     </div>
 
-                    <button
-                        class="dropButton"
-                        onclick="window.location.href='./contact.html'"
-                    >
-                        Contact
-                    </button>
+                    <a href="./contact.html">
+                        <button class="dropButton">Contact</button>
+                    </a>
 
-                    <button
-                        class="dropButton"
-                        onclick="window.location.href='./about.html'"
-                    >
-                        About
-                    </button>
+                    <a href="./about.html">
+                        <button class="dropButton">About</button>
+                    </a>
                 </nav>
             </div>
             <div class="titleBase"></div>
         </header>
         <main>
             <h1 class="flexParent pageTitle">Bread Baking Resources</h1>
-            <figure class="flexParent">
-                <img
-                    src="./static/media/images/resource.jpg"
-                    alt="An image of bread making in progress"
-                    height="500"
-                    class = "rounded"
-                />
-            </figure>
+            <div class="flexParent">
+                <figure class="flexChild">
+                    <img
+                        src="./static/media/images/resource.jpg"
+                        alt="An image of bread making in progress"
+                        height="500"
+                        class="rounded"
+                    />
+                </figure>
+            </div>
 
             <div class="flexParent">
                 <div class="flexChild boxed">
