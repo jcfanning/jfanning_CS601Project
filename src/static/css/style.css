@@ -1,0 +1,313 @@
+/*
+----------------------------------------------------------------------------------------------------
+Base Text Style
+----------------------------------------------------------------------------------------------------
+*/
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Form Warnings
+----------------------------------------------------------------------------------------------------
+*/
+
+.warningShow {
+    background-color: rgb(255, 175, 175);
+}
+
+.warningHide {
+    display: none;
+}
+
+.validData {
+    background-color:initial;
+}
+
+.invalidData {
+    background-color: rgb(255, 175, 175);
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Show/Hide Classes
+----------------------------------------------------------------------------------------------------
+*/
+
+.hidden {
+    display: none;
+    
+}
+
+.show {
+    display: contents;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+gen formatting
+----------------------------------------------------------------------------------------------------
+*/
+.flexParent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.flexChild {
+    width: 800px;
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+.flexChild img {
+    width: 790px;
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.flexParentVert {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.middleText {
+    align-self: center;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0px;
+}
+
+img {
+    margin: 0px;
+    padding: 0px;
+}
+
+figure {
+    margin: 0px;
+    padding: 0px;
+}
+
+.boxed {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.paperBack {
+    background-image: url("../media/images/paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 500;
+}
+
+.width400 {
+    max-width: 400px;
+}
+
+.rounded{
+    border-radius: 20px;
+}
+
+.warningFormat{
+    margin-left: 15px;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Body Style
+----------------------------------------------------------------------------------------------------
+*/
+body {
+    background-color: rgb(184, 184, 184);
+    min-width: 400px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Header Style
+----------------------------------------------------------------------------------------------------
+*/
+
+.titleSec {
+    border-bottom: solid;
+    border-bottom-width: 10px;
+    margin: 30px 15px 0px 15px;
+}
+
+.siteTitle {
+    font-size: 3rem;
+    margin: 0px;
+}
+
+.titleBase {
+    margin: 0px 15px 0px 15px;
+    height: 400px;
+    background-image: url("../media/images/crumb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.drop {
+    padding: 0px;
+}
+.dropButton {
+    font-size: 2rem;
+    border-style: solid;
+    border-color: rgb(1, 1, 1, 0);
+    border-width: 0.1rem;
+    border-radius: 1rem;
+    color: black;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.dropButton:hover,
+.drop:hover .dropButton {
+    /* background-color: #7D938A; */
+    /* border-style: solid; */
+    /* border-color: black; */
+    /* border-width: 0.1rem; */
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.dropStuff {
+    display: none;
+    border-style: solid;
+    border-width: 0px 5px 5px 5px;
+    border-radius: 0px 0px 10px 10px;
+    border-color: rgb(78, 78, 78);
+    margin-top: 0px;
+    position: absolute;
+    background-color: rgb(245, 245, 245);
+    z-index: 1;
+}
+
+.dropStuff a {
+    float: none;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: inherit;
+}
+
+.dropStuff a:hover {
+    background-color: rgb(255, 221, 170);
+}
+
+.drop:hover .dropStuff {
+    display: block;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Main Style
+----------------------------------------------------------------------------------------------------
+*/
+main {
+    background-color: rgb(245, 245, 245);
+    margin: 0px 15px 0px 15px;
+    padding: 10px 0px 30px 0px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Footer Style
+----------------------------------------------------------------------------------------------------
+*/
+
+footer {
+    margin: 0px 15px 5px 15px;
+    border-top: solid;
+    border-top-width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.innerFoot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    padding: 10px;
+}
+.innerFoot p {
+    margin: 0px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------
+Table Style
+----------------------------------------------------------------------------------------------------
+*/
+
+.tableOverflow {
+    overflow-x: auto;
+}
+
+.ingTable {
+    border-collapse: collapse;
+    width: 700px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.ingTable td,
+th {
+    /* padding: 1.5rem; */
+    padding-inline: 1.5rem;
+    text-align: center;
+}
+
+.ingTable thead {
+    border: 1px solid;
+    background-color: #ada0a6;
+}
+.ingTable tbody td,
+th {
+    border: 1px solid;
+}
+
+.ingTable tbody tr:nth-child(odd) {
+    background-color: #ded6d6;
+}
+
+.ingTable tbody tr:nth-child(even) {
+    background-color: #d2cbcb;
+}

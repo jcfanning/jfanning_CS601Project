@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A Tasty Loaf &nbsp; | &nbsp; Resources</title>
+        <link href="./static/css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="titleSec">
+                <div class="flexParent">
+                    <h1 class="siteTitle">The Tasty Loaf</h1>
+                </div>
+                <nav>
+                    <button
+                        class="dropButton"
+                        onclick="window.location.href='./index.html'"
+                    >
+                        Home
+                    </button>
+                    <div class="drop">
+                        <button class="dropButton">Recipes</button>
+                        <div class="dropStuff">
+                            <a href="./rec_slow_sourdough.html"
+                                >Slow Sourdough</a
+                            >
+                            <a href="./rec_pizza_dough.html">Pizza Dough</a>
+                        </div>
+                    </div>
+
+                    <div class="drop">
+                        <button class="dropButton">Worksheets</button>
+                        <div class="dropStuff">
+                            <a href="./wkst_starter.html">Starter Worksheet</a>
+                        </div>
+                    </div>
+
+                    <div class="drop">
+                        <button class="dropButton">Extra</button>
+                        <div class="dropStuff">
+                            <a href="./resources.html">Resources</a>
+                            <a href="./hangMan.html">Game</a>
+                        </div>
+                    </div>
+
+                    <button
+                        class="dropButton"
+                        onclick="window.location.href='./contact.html'"
+                    >
+                        Contact
+                    </button>
+
+                    <button
+                        class="dropButton"
+                        onclick="window.location.href='./about.html'"
+                    >
+                        About
+                    </button>
+                </nav>
+            </div>
+            <div class="titleBase"></div>
+        </header>
+        <main>
+            <h1 class="flexParent pageTitle">Bread Baking Resources</h1>
+            <figure class="flexParent">
+                <img
+                    src="./static/media/images/resource.jpg"
+                    alt="An image of bread making in progress"
+                    height="500"
+                    class = "rounded"
+                />
+            </figure>
+
+            <div class="flexParent">
+                <div class="flexChild boxed">
+                    <h2>Websites:</h2>
+                    <p>
+                        <a
+                            href="https://www.kingarthurbaking.com/learn"
+                            target="blank"
+                            ><b>King Arthur Baking</b></a
+                        >
+                        has a wide variety of resources to help both new and
+                        experienced bakers.
+                    </p>
+                    <p>
+                        <a href="https://breadtopia.com/" target="blank"
+                            ><b>Breadtopia</b></a
+                        >
+                        another resource for baking and baking supplies
+                    </p>
+                    <p>
+                        <a href="https://www.thefreshloaf.com/" target="blank"
+                            ><b>The Fresh Loaf</b></a
+                        >
+                        a bread focused forum and bread info source
+                    </p>
+                </div>
+
+                <div class="flexChild">
+                    <h2>Scoring Demo</h2>
+                    <video
+                        src="./static/media/video/scoring.mp4"
+                        title="a video demo of scoring a loaf"
+                        width="700"
+                        height="auto"
+                        class="rounded"
+                        controls
+                    ></video>
+                    <p>
+                        An example of scoring a loaf of bread with a razor blade
+                        prior to baking
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="innerFoot">
+                <p>The Tasty Loaf</p>
+                <p>A Bread Baking Blog</p>
+                <p>2021</p>
+            </div>
+        </footer>
+    </body>
+</html>

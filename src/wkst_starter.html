@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A Tasty Loaf &nbsp; | &nbsp; Starter Worksheet</title>
+        <link href="./static/css/style.css" rel="stylesheet" />
+        <script src="./static/javaScript/wkst_starter.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="titleSec">
+                <div class="flexParent">
+                    <h1 class="siteTitle">The Tasty Loaf</h1>
+                </div>
+                <nav>
+                    <button
+                        class="dropButton"
+                        onclick="window.location.href='./index.html'"
+                    >
+                        Home
+                    </button>
+                    <div class="drop">
+                        <button class="dropButton">Recipes</button>
+                        <div class="dropStuff">
+                            <a href="./rec_slow_sourdough.html"
+                                >Slow Sourdough</a
+                            >
+                            <a href="./rec_pizza_dough.html">Pizza Dough</a>
+                        </div>
+                    </div>
+
+                    <div class="drop">
+                        <button class="dropButton">Worksheets</button>
+                        <div class="dropStuff">
+                            <a href="./wkst_starter.html">Starter Worksheet</a>
+                        </div>
+                    </div>
+
+                    <div class="drop">
+                        <button class="dropButton">Extra</button>
+                        <div class="dropStuff">
+                            <a href="./resources.html">Resources</a>
+                            <a href="./hangMan.html">Game</a>
+                        </div>
+                    </div>
+
+                    <button
+                        class="dropButton"
+                        onclick="window.location.href='./contact.html'"
+                    >
+                        Contact
+                    </button>
+
+                    <button
+                        class="dropButton"
+                        onclick="window.location.href='./about.html'"
+                    >
+                        About
+                    </button>
+                </nav>
+            </div>
+            <div class="titleBase"></div>
+        </header>
+
+        <main>
+            <h1 class="flexParent pageTitle">Starter Worksheet</h1>
+
+            <div class="flexParent">
+                <figure class="flexChild">
+                    <img
+                        src="./static/media/images/starter.jpg"
+                        alt="An image of a bubbling sourdough starter"
+                        height="1403"
+                        width="1234"
+                    />
+                </figure>
+
+                <div id="jsToggle1" class="hidden">
+                    <div class="flexChild">
+                        <form class="boxed">
+                            <fieldset class="width400">
+                                <legend>How many feeding cycles?</legend>
+                                <input
+                                    id="feedingNum1"
+                                    type="radio"
+                                    name="feedingNum"
+                                    value="1"
+                                    checked
+                                />1
+                                <br />
+                                <input
+                                    id="feedingNum2"
+                                    type="radio"
+                                    name="feedingNum"
+                                    value="2"
+                                />2
+                            </fieldset>
+                            <br />
+                            <div>
+                                <label for="starterAmount"
+                                    >Amount of starter for the recipe?
+                                    (g)</label
+                                >
+                                <br />
+                                <input
+                                    id="starterAmount"
+                                    type="number"
+                                    name="starterAmount"
+                                    placeholder="in grams e.g. 15"
+                                /><span id="warningAmount" class="warningFormat warningHide"
+                                    >Must be a number larger than 0</span
+                                >
+                            </div>
+
+                            <div>
+                                <label for="starterRemain"
+                                    >Amount of starter to be leftover?
+                                    (g)</label
+                                >
+                                <br />
+                                <input
+                                    id="starterRemain"
+                                    type="number"
+                                    name="starterRemain"
+                                    placeholder="in grams e.g 15"
+                                /><span id="warningRemain" class="warningFormat warningHide"
+                                    >Must be a number 0 or larger</span
+                                >
+                            </div>
+
+                            <div>
+                                <label for="starterPercent"
+                                    >Percent of starter in each feeding?
+                                    (%)</label
+                                >
+                                <br />
+                                <input
+                                    id="starterPercent"
+                                    type="number"
+                                    name="starterPercent"
+                                    placeholder="percentage e.g. 10"
+                                /><span id="warningPercent" class="warningFormat warningHide"
+                                    >Must be between 0 and 100</span
+                                >
+                            </div>
+                            <br />  
+                            <input
+                                id="starterSubmit"
+                                type="button"
+                                value="Submit"
+                            />
+                            <input
+                                id="starterReset"
+                                type="reset"
+                                value="Clear Entries"
+                            />
+                        </form>
+                    </div>
+                </div>
+                <noscript class="flexChild middleText centerText">
+                    <p>Sorry, JavaScript must be enabled to use this tool.</p>
+                </noscript>
+            </div>
+            <div id="jsToggle2" class="hidden">
+                <br /><br />
+                <div class="flexParent">
+                    <h3 id="starterHeader" class="centerText hidden">hidden</h3>
+                    <br />
+                </div>
+                <div class="flexParent">
+                    <div class="flexChild">
+                        <div id="starterTable" class="hidden"></div>
+                    </div>
+                    <div id="instructions" class="flexChild">
+                        <p id="starterOutput1" class="hidden"></p>
+                        <br />
+                        <br />
+                        <p id="starterOutput2" class="hidden"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="innerFoot">
+                <p>The Tasty Loaf</p>
+                <p>A Bread Baking Blog</p>
+                <p>2021</p>
+            </div>
+        </footer>
+    </body>
+</html>
