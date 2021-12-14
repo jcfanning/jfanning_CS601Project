@@ -231,6 +231,10 @@ function publishFeeding(data) {
 
     // 1st feed info
     if (data.feedings === 2) {
+        if (document.getElementById("starterOutput2").contains("show")) {
+            document.getElementById("starterOutput2").classList.remove("show");
+            document.getElementById("starterOutput2").classList.add("hide");
+        }
         document.getElementById("starterOutput2").innerHTML =
             "Feeding 2: Combine the result of feeding 1 with the flour and water. Mix until well incorporated. Let sit for 8-12 hours";
         document.getElementById("starterOutput2").classList.add("show");
