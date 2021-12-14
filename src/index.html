@@ -15,9 +15,8 @@
                     <h1 class="siteTitle">The Tasty Loaf</h1>
                 </div>
                 <nav>
-                    <a href="./index.html">
-                        <button class="dropButton">Home</button>
-                    </a>
+                    <a href="./index.html" class="dropButton">Home</a>
+
                     <div class="drop">
                         <button class="dropButton">Recipes</button>
                         <div class="dropStuff">
@@ -43,13 +42,9 @@
                         </div>
                     </div>
 
-                    <a href="./contact.html">
-                        <button class="dropButton">Contact</button>
-                    </a>
-
-                    <a href="./about.html">
-                        <button class="dropButton">About</button>
-                    </a>
+                    <a href="./contact.html" class="dropButton">Contact</a>
+                    
+                    <a href="./about.html" class="dropButton">About</a>
                 </nav>
             </div>
             <div class="titleBase"></div>
@@ -72,20 +67,23 @@
                     as well.
                 </p>
             </div>
-            <div id="jsToggle" class="hidden flexParent">
-                <div id="quoteContainer" class="flexChild">
-                    <fieldset class="flexParentVert">
-                        <legend>Your Daily Bread Pun</legend>
-                        <p class="centerText">
-                            <span>"</span><span id="quote"></span><span>"</span>
-                        </p>
-                        <input
-                            id="newQuote"
-                            type="button"
-                            value="I crust have another!"
-                            class="quoteButton"
-                        />
-                    </fieldset>
+            <div id="jsToggle" class="hidden">
+                <div class="flexParent">
+                    <div id="quoteContainer" class="flexChild">
+                        <fieldset class="flexParentVert">
+                            <legend>Your Daily Bread Pun</legend>
+                            <p class="centerText">
+                                <span>"</span><span id="quote"></span
+                                ><span>"</span>
+                            </p>
+                            <input
+                                id="newQuote"
+                                type="button"
+                                value="I crust have another!"
+                                class="quoteButton subButton"
+                            />
+                        </fieldset>
+                    </div>
                 </div>
             </div>
         </main>

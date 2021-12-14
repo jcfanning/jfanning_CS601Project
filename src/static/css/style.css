@@ -73,6 +73,14 @@ gen formatting
     border-radius: 20px;
 }
 
+.flexChild video{
+    width: 790px;
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 20px;
+}
+
 .flexParentVert {
     display: flex;
     flex-wrap: wrap;
@@ -223,16 +231,13 @@ nav {
     color: black;
     background-color: inherit;
     font-family: inherit;
+    text-decoration: none;
 }
 
 .dropButton:hover,
-.drop:hover .dropButton {
-    /* background-color: #7D938A; */
-    /* border-style: solid; */
-    /* border-color: black; */
-    /* border-width: 0.1rem; */
+.drop:hover  {
     text-decoration: underline;
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .dropStuff {
@@ -345,3 +350,36 @@ th {
 .ingTable tbody tr:nth-child(even) {
     background-color: #d2cbcb;
 }
+
+/*
+----------------------------------------------------------------------------------------------------
+Hangman Style
+----------------------------------------------------------------------------------------------------
+*/
+
+.targetWord{
+    font-size: 2.5rem;;
+}
+
+
+/*
+----------------------------------------------------------------------------------------------------
+Size Mods
+----------------------------------------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 1600px) {
+
+.titleBase{
+    height: 200px;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .titleBase{
+        height: 75px;
+    }
+    
+    }

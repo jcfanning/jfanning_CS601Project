@@ -8,6 +8,7 @@ new Vue({
         displayWord: "",
         strikes: 0,
         gameOver: false,
+        imageState: "./static/media/images/S0.png",
     },
     methods: {
         addItem() {
@@ -26,9 +27,12 @@ new Vue({
                     this.message = "Your guess was not a letter, try again";
                 }
 
+                //mod image
+                this.imageSet(this.strikes);
+
                 //check for loss
                 if (this.strikes === 6) {
-                    this.message = `Sorry, you've lost, the word was: ${this.target}. Please try again!`;
+                    this.message = `Sorry, you've lost, the word was "${this.target}". Please try again!`;
                     this.gameOver = true;
                 }
 
@@ -80,11 +84,25 @@ new Vue({
 
         async chooseWord() {
             let wordList = await this.gatherList();
-            let choice = Math.round(Math.random() * wordList.length-1);
+            let choice = Math.round(Math.random() * wordList.length - 1);
             this.target = wordList[choice];
             // console.log(choice);
             console.log(this.target);
             this.genDisplay();
+        },
+
+        imageSet(num) {
+            let target = parseInt(num);
+            let imageList = [
+                "./static/media/images/S0.png",
+                "./static/media/images/S1.png",
+                "./static/media/images/S2.png",
+                "./static/media/images/S3.png",
+                "./static/media/images/S4.png",
+                "./static/media/images/S5.png",
+                "./static/media/images/S6.png",
+            ];
+            this.imageState = imageList[target];
         },
 
         reset() {
@@ -93,9 +111,16 @@ new Vue({
             this.strikes = 0;
             this.gameOver = false;
             this.chooseWord();
+            this.imageSet(0);
+        },
+
+        showJs() {
+            document.querySelector("#jsToggle1").classList.add("show");
+            document.querySelector("#jsToggle1").classList.remove("hidden");
         },
     },
     beforeMount() {
+        this.showJs();
         this.chooseWord();
     },
 });
