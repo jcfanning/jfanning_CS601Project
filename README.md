@@ -14,7 +14,7 @@ For my final project I made a site centered around bread baking. It contains som
 
 ## To Run
 
-Navigate to this url: 
+Navigate to this url: https://relaxed-heyrovsky-b0f238.netlify.app
 
 -- Or --
 
